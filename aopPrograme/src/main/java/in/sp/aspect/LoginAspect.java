@@ -12,6 +12,7 @@ public class LoginAspect implements MethodBeforeAdvice {
 	public void before(Method method, Object[] args, Object target) throws Throwable {
 		System.out.println("---------loging service apply----------->");
 		
+		System.out.println("---------Securaty service apply----------->");
 	}
 	
 	
