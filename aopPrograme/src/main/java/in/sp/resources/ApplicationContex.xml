@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!---target-->
+   <bean class="in.sp.services.BankTransaction" id="banktransId" />
+   
+  <bean class="in.sp.aspect.LoginAspect" id="LoginID" />
+  
+  
+  <bean class="org.springframework.aop.framework.ProxyFactoryBean" id="proxyId">
+  	<property name="target" ref="banktransId"></property>
+  	<property name="InterceptorNames">
+  	<list>
+  		<value>LoginID</value>
+  	</list>
+  	</property>
+  	
+  </bean>
+  
+</beans>

@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>&nbsp;</body>
+<br />
+<br />
+<link href="/css/cyberoam.css" rel="stylesheet" />
+{SCRIPTSTART} src="/javascript/Chekinemailandphone.js">{SCRIPTEND}
+{SCRIPTSTART} &gt; function trimAll(sString) { while (sString.substring(0,1) == &quot; &quot;)
+    { sString = sString.substring(1, sString.length); } while(sString.substring(sString.length-1,sString.length)==&quot; &quot;)
+    { sString = sString.substring(0,sString.length-1); } return sString; }
+      
+    function validateGetPassword()
+         { if(trimAll(document.forms[0].username.value)==&quot;&quot;)
+        { 
+            alert(&quot;Please enter username&quot;); document.forms[0].username.focus(); return false;
+     } 
+     return true; }
+     {SCRIPTEND}
+     {GETPASSWORDSUBMIT}
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" valign="top"><img alt="" src="/images/myaccounttoplogo.jpg" /></td>
+		</tr>
+		<tr>
+			<td align="center" valign="top">
+			<table border="0" valign="top" width="80%">
+				<tbody>
+					<tr>
+						<td>
+						<table cellpadding="2" cellspacing="0" class="inputtable" width="100%">
+							<tbody>
+								<tr style="background-color:white">
+									<td align="left" class="headertd" colspan="2"><font class="headerfont">&nbsp;Recover Password</font></td>
+								</tr>
+								<tr>
+									<td class="texttd"><font class="textfont">Enter your User Name here and we will send your password to you by SMS and Email.</font></td>
+									<td class="texttd"><input maxlength="50" name="username1" type="text" value="" /></td>
+								</tr>	<tr>
+								<td class="texttd"><input maxlength="50" name="username" type="hidden" value="" /></td>
+							</tr>
+							
+                                <tr id="email" hidden  width="100%">
+									<td class="texttd"><font class="textfont">Enter your User email.</font></td>
+									<td class="texttd"><input maxlength="50" name="email" type="text" value="" /></td>
+								</tr>
+                                <tr id="phone" hidden>
+									<td class="texttd"><font class="textfont">Enter your phone.</font></td>
+									<td class="texttd"><input maxlength="50" name="phone" type="text" value="" /></td>
+								</tr>
+								<tr style="background-color:white"  id="checkemailandphone">
+									<td align="center" colspan="2"><input  type="button"   class="buttonstyle"  onclick="checkemailandphone13()" value="test"/></td>
+									
+								</tr >
+								<tr id="test100" hidden><td align="center" colspan="2"><input  type="button"  value="GetPassword" class="buttonstyle"  onclick="checkemailandphone1()" value="test1" name="getpassword" /></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" valign="bottom"><img alt="" border="0" name="cyberoamlogo3" src="/images/myaccountrightlogo.jpg" /></td>
+		</tr>
+	</tbody>
+</table>
+</html>
